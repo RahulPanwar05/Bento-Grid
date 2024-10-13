@@ -1,0 +1,150 @@
+<style > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+.container {
+  display: grid;
+  /* border: 1px solid red; */
+  max-width: 60vw;
+  margin: 50px auto;
+  box-sizing: border-box;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(6, auto);
+  gap: 15px;
+  height: 90vh;
+}
+
+.box {
+  /* border: 1px solid black; */
+  padding: 20px;
+  overflow: hidden;
+  color: #121212;
+}
+.one {
+  /* grid-row: span 6; */
+  background-color: #f9eee1;
+  grid-row: span 3;
+  gap: 30px;
+}
+h2 {
+  /* font-size: 2em; */
+  font-weight: 600;
+  font-size: 1.8em;
+  line-height: 27px;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+}
+h3 {
+  font-weight: 600px;
+  font-size: 1.3em;
+  line-height: 22px;
+}
+
+.two {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #7650dc;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.three {
+  grid-row: span 4;
+  background-color: #dacffc;
+  gap: 15px;
+}
+.three img {
+  width: 150%;
+}
+.four {
+  grid-row: 4 /7;
+  background-color: #ffcb6b;
+  gap: 30px;
+}
+.five {
+  background-color: #ffffff;
+  grid-row: 3 / span 2;
+  gap: 10px;
+}
+.six {
+  grid-row: 3 / span 2;
+  background-color: #ffcb6b;
+  gap: 8px;
+}
+.seven {
+  background-color: #ffffff;
+  grid-row: span 2;
+  gap: 20px;
+}
+.eight {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #7650dc;
+  display: flex;
+  color: white;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 90vw;
+    height: auto;
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven {
+    grid-row: auto;
+    grid-column: auto; /* Let all items stack in one column */
+  }
+
+  .one {
+    order: 7;
+  }
+  .two {
+    order: 1;
+  }
+  .three {
+    order: 4;
+  }
+  .three img {
+    width: 100%;
+  }
+  .four {
+    order: 8;
+  }
+  .five {
+    order: 2;
+  }
+  .six {
+    order: 3;
+  }
+  .seven {
+    order: 6;
+  }
+  .eight {
+    grid-row: auto;
+    grid-column: auto; /* Let all items stack in one column */
+    flex-direction: column;
+    gap: 20px;
+    order: 5;
+  }
+}
